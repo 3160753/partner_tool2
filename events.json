@@ -1,34 +1,7 @@
 {
-  "generated": "2026-05-20T06:15:43.166503+00:00",
+  "generated": "2026-05-21T06:17:19.716467+00:00",
   "count": 82,
   "events": [
-    {
-      "title": "Energy Storage B2B Session Spring Edition",
-      "source": "EEN",
-      "date": "2026-05-21",
-      "date_end": "",
-      "location": "",
-      "url": "https://een.ec.europa.eu/events/energy-storage-b2b-session-spring-edition",
-      "description": ""
-    },
-    {
-      "title": "chii 2026 - Conference & Matchmaking Event for Hyperspectral Imaging in Industry 2026",
-      "source": "EEN",
-      "date": "2026-05-21",
-      "date_end": "",
-      "location": "",
-      "url": "https://een.ec.europa.eu/events/chii-2026-conference-matchmaking-event-hyperspectral-imaging-industry-2026",
-      "description": ""
-    },
-    {
-      "title": "L'énergie dans la construction en Grande Région",
-      "source": "EEN",
-      "date": "2026-05-21",
-      "date_end": "",
-      "location": "",
-      "url": "https://een.ec.europa.eu/events/lenergie-dans-la-construction-en-grande-region",
-      "description": ""
-    },
     {
       "title": "Balkonnect Festival 2026 - B2B Matchmaking Event",
       "source": "EEN",
@@ -48,7 +21,7 @@
       "description": ""
     },
     {
-      "title": "Filter by",
+      "title": "Textile Connect 2026",
       "source": "EEN",
       "date": "2026-05-27",
       "date_end": "",
@@ -66,11 +39,11 @@
       "description": ""
     },
     {
-      "title": "Regional Innovation Forum: Bridging Science and Industry through Technology Transfer",
+      "title": "Filter by",
       "source": "EEN",
       "date": "2026-05-27",
       "date_end": "",
-      "location": "",
+      "location": "Online",
       "url": "https://een.ec.europa.eu/events/regional-innovation-forum-bridging-science-and-industry-through-technology-transfer",
       "description": ""
     },
@@ -147,11 +120,11 @@
       "description": ""
     },
     {
-      "title": "Research and Innovation Matchmaking Event 2026 (Cyprus, Greece and Czechia)",
+      "title": "Filter by",
       "source": "EEN",
       "date": "2026-06-09",
       "date_end": "",
-      "location": "",
+      "location": "Online",
       "url": "https://een.ec.europa.eu/events/research-and-innovation-matchmaking-event-2026-cyprus-greece-and-czechia",
       "description": ""
     },
@@ -183,7 +156,7 @@
       "description": ""
     },
     {
-      "title": "Filter by",
+      "title": "AI ABEL 2026 Artificial Intelligence Applications in Business and Everyday Life",
       "source": "EEN",
       "date": "2026-06-12",
       "date_end": "",
@@ -201,12 +174,12 @@
       "description": ""
     },
     {
-      "title": "MIRABILIA FOOD 2026",
+      "title": "Matchmaking @ 20th Silicon Saxony Days",
       "source": "EEN",
       "date": "2026-06-17",
       "date_end": "",
       "location": "",
-      "url": "https://een.ec.europa.eu/events/mirabilia-food-2026",
+      "url": "https://een.ec.europa.eu/events/matchmaking-20th-silicon-saxony-days",
       "description": ""
     },
     {
@@ -216,6 +189,15 @@
       "date_end": "",
       "location": "",
       "url": "https://een.ec.europa.eu/events/mirabilia-tourism-2026",
+      "description": ""
+    },
+    {
+      "title": "MIRABILIA FOOD 2026",
+      "source": "EEN",
+      "date": "2026-06-17",
+      "date_end": "",
+      "location": "",
+      "url": "https://een.ec.europa.eu/events/mirabilia-food-2026",
       "description": ""
     },
     {
@@ -297,6 +279,15 @@
       "date_end": "",
       "location": "",
       "url": "https://een.ec.europa.eu/events/bharat-tex-2026",
+      "description": ""
+    },
+    {
+      "title": "Eureka Biotech Call 2026 Matchmaking",
+      "source": "EEN",
+      "date": "2026-09-01",
+      "date_end": "",
+      "location": "Online",
+      "url": "https://een.ec.europa.eu/events/eureka-biotech-call-2026-matchmaking",
       "description": ""
     },
     {
@@ -468,6 +459,15 @@
       "date_end": "",
       "location": "Online",
       "url": "https://een.ec.europa.eu/events/edf-partner-pool",
+      "description": ""
+    },
+    {
+      "title": "Horizons of Innovation Forum",
+      "source": "EEN",
+      "date": "2026-12-01",
+      "date_end": "",
+      "location": "",
+      "url": "https://een.ec.europa.eu/events/horizons-innovation-forum",
       "description": ""
     },
     {
