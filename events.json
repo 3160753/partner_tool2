@@ -1,16 +1,7 @@
 {
-  "generated": "2026-06-02T06:48:44.009012+00:00",
-  "count": 64,
+  "generated": "2026-06-03T07:00:07.273114+00:00",
+  "count": 74,
   "events": [
-    {
-      "title": "Speed-Match International Networking Event 2026",
-      "source": "EEN",
-      "date": "2026-06-03",
-      "date_end": "",
-      "location": "Online",
-      "url": "https://een.ec.europa.eu/events/speed-match-international-networking-event-2026",
-      "description": ""
-    },
     {
       "title": "Horizon Europe Clean Industrial Deal International Brokerage Event",
       "source": "EEN",
@@ -30,11 +21,11 @@
       "description": ""
     },
     {
-      "title": "World Sauna Forum 2026 Matchmaking",
+      "title": "Filter by",
       "source": "EEN",
       "date": "2026-06-11",
       "date_end": "",
-      "location": "",
+      "location": "Online",
       "url": "https://een.ec.europa.eu/events/world-sauna-forum-2026-matchmaking",
       "description": ""
     },
@@ -57,7 +48,7 @@
       "description": ""
     },
     {
-      "title": "Filter by",
+      "title": "AI ABEL 2026 Artificial Intelligence Applications in Business and Everyday Life",
       "source": "EEN",
       "date": "2026-06-12",
       "date_end": "",
@@ -111,20 +102,20 @@
       "description": ""
     },
     {
-      "title": "Β2Β meetings between Greek, Slovak and Cypriote companies during BEYOND 2026",
+      "title": "Filter by",
       "source": "EEN",
       "date": "2026-06-17",
       "date_end": "",
-      "location": "",
+      "location": "Online",
       "url": "https://een.ec.europa.eu/events/b2b-meetings-between-greek-slovak-and-cypriote-companies-during-beyond-2026",
       "description": ""
     },
     {
-      "title": "Filter by",
+      "title": "B2B@BEYOND 2026",
       "source": "EEN",
       "date": "2026-06-19",
       "date_end": "",
-      "location": "Online",
+      "location": "",
       "url": "https://een.ec.europa.eu/events/b2bbeyond-2026",
       "description": ""
     },
@@ -219,11 +210,11 @@
       "description": ""
     },
     {
-      "title": "Filter by",
+      "title": "SEMICON India 2026",
       "source": "EEN",
       "date": "2026-09-19",
       "date_end": "",
-      "location": "Online",
+      "location": "",
       "url": "https://een.ec.europa.eu/events/semicon-india-2026",
       "description": ""
     },
@@ -273,7 +264,7 @@
       "description": ""
     },
     {
-      "title": "Conxemar 2026 online B2B: Tech Challenges & Business Opportunities",
+      "title": "Filter by",
       "source": "EEN",
       "date": "2026-10-01",
       "date_end": "",
@@ -318,7 +309,7 @@
       "description": ""
     },
     {
-      "title": "Filter by",
+      "title": "Dronetech World Meeting 2026 B2B Hybrid Matchmaking Event",
       "source": "EEN",
       "date": "2026-10-23",
       "date_end": "",
@@ -327,7 +318,7 @@
       "description": ""
     },
     {
-      "title": "Renewable Energy India Expo 2026",
+      "title": "Filter by",
       "source": "EEN",
       "date": "2026-10-24",
       "date_end": "",
@@ -404,8 +395,107 @@
       "date": "",
       "date_end": "",
       "location": "",
-      "url": "https://een.ec.europa.eu?f%5B0%5D=event_date%3Agt%7C2026-06-02T00%3A00%3A00%2B00%3A00%7C2026-06-02T00%3A00%3A00%2B00%3A00&f%5B1%5D=t%3A627&page=3",
+      "url": "https://een.ec.europa.eu?f%5B0%5D=event_date%3Agt%7C2026-06-03T00%3A00%3A00%2B00%3A00%7C2026-06-03T00%3A00%3A00%2B00%3A00&f%5B1%5D=t%3A627&page=3",
       "description": ""
+    },
+    {
+      "title": "Unlocking Innovation Potential: IP Essentials for Future EIC Applicants",
+      "source": "Access2EIC",
+      "date": "",
+      "date_end": "",
+      "location": "Online",
+      "url": "https://access2eic.eu/event/unlocking-innovation-potential-ip-essentials-for-future-eic-applicants/",
+      "description": "Are you considering applying to the European Innovation Council? Join the webinars organized by the European IP Helpdesk to gain practical insights i..."
+    },
+    {
+      "title": "Relive the EIC Online Info Day – Work Programme 2026",
+      "source": "Access2EIC",
+      "date": "",
+      "date_end": "",
+      "location": "Online",
+      "url": "https://access2eic.eu/event/relive-the-eic-online-info-day-work-programme-2026-2/",
+      "description": "Did you miss the EIC Online Info Day on the European Innovation Council Work Programme 2026? Or maybe you want to revisit the key insights and pres..."
+    },
+    {
+      "title": "Online Info Session: European Startup and Scaleup Hubs – Pilot Call (HORIZON-EIE-2026-02-CONNECT-01)",
+      "source": "Access2EIC",
+      "date": "",
+      "date_end": "",
+      "location": "Online",
+      "url": "https://access2eic.eu/event/online-info-session-european-startup-and-scaleup-hubs-pilot-call-horizon-eie-2026-02-connect-01/",
+      "description": "The European Commission, through EISMEA and DG RTD, is organizing an online information session to present the pilot call “European Startup and Scal..."
+    },
+    {
+      "title": "Next Generation Innovation Talents Scheme Info Day 18/09",
+      "source": "Access2EIC",
+      "date": "",
+      "date_end": "",
+      "location": "Online",
+      "url": "https://access2eic.eu/event/next-generation-innovation-talents-scheme-info-day-18-09/",
+      "description": "Access2EIC network would like to inform you about the Next Generation Innovation Talents Scheme Info Day that will take place on Monday 18/09 from 1..."
+    },
+    {
+      "title": "EIC T2M Entrepreneurship & Venture Building Programme Info Session - 12 September",
+      "source": "Access2EIC",
+      "date": "",
+      "date_end": "",
+      "location": "Online",
+      "url": "https://access2eic.eu/event/eic-t2m-entrepreneurship-venture-building-programme-info-session-12-september/",
+      "description": "The European Innovation Council (EIC) invites the EIC Pathfinder and EIC Transition beneficiaries to participate in the EIC Tech to Market (T2M) En..."
+    },
+    {
+      "title": "EIC Corporate Day with AB inBev - 26/27 June, Leuven",
+      "source": "Access2EIC",
+      "date": "",
+      "date_end": "",
+      "location": "Online",
+      "url": "https://access2eic.eu/event/eic-corporate-day-with-ab-inbev/",
+      "description": "Open Call – EIC Corporate Day with AB inBev: Meet, pitch and cheers with a global drink and brewing company! The European Innovation Council (EIC..."
+    },
+    {
+      "title": "EIC Infoday 2023 - 13th June in Šibenik, Croatia",
+      "source": "Access2EIC",
+      "date": "",
+      "date_end": "",
+      "location": "Online",
+      "url": "https://access2eic.eu/event/eic-infoday-2023-13th-june-in-sibenik-croatia/",
+      "description": "The Croatian Agency for SMEs, Innovation and Investments (HAMAG-BICRO) and European Innovation Council and SMEs Executive Agency (EISMEA) are pleased ..."
+    },
+    {
+      "title": "The European Capital of Innovation Awards (iCapital)",
+      "source": "Access2EIC",
+      "date": "",
+      "date_end": "",
+      "location": "Online",
+      "url": "https://access2eic.eu/event/the-european-capital-of-innovation-awards-icapital/",
+      "description": "On 28th March, the European Innovation Council and SMEs Executive Agency (EISMEA) is organizing an informative webinar to learn more about the 9th e..."
+    },
+    {
+      "title": "EIC Infoday in Sophia",
+      "source": "Access2EIC",
+      "date": "",
+      "date_end": "",
+      "location": "Online",
+      "url": "https://access2eic.eu/event/eic-infoday-in-sophia/",
+      "description": "The European Innovation Council (EIC) is Europe's most ambitious innovation flagship initiative, with € 10.1 billion earmarked to help Europe's mo..."
+    },
+    {
+      "title": "EIC Challenges Information Days",
+      "source": "Access2EIC",
+      "date": "",
+      "date_end": "",
+      "location": "Online",
+      "url": "https://access2eic.eu/event/eic-challenges-information-days/",
+      "description": "EIC invite you for a series of information days on EIC Challenges, organised by the EIC Programme Managers.To know more about the EIC Challenges Infor..."
+    },
+    {
+      "title": "Infoday Webinar EIC Pilot: How to succeed in the EIC Pathfinder and Accelerator 2020 calls",
+      "source": "Access2EIC",
+      "date": "",
+      "date_end": "",
+      "location": "Online",
+      "url": "https://access2eic.eu/event/infoday-webinar-eic-pilot-how-to-succeed-in-the-eic-pathfinder-and-accelerator-2020-calls/",
+      "description": "We are inviting you to join an infoday webinar on the topic “European Innovation Council Pilot: How to succeed in the EIC Pathfinder and Accelerator..."
     },
     {
       "title": "EBAN Congress 2026",
