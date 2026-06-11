@@ -1,43 +1,7 @@
 {
-  "generated": "2026-06-10T06:37:51.741754+00:00",
-  "count": 78,
+  "generated": "2026-06-11T06:57:08.569064+00:00",
+  "count": 75,
   "events": [
-    {
-      "title": "World Sauna Forum 2026 Matchmaking",
-      "source": "EEN",
-      "date": "2026-06-11",
-      "date_end": "",
-      "location": "",
-      "url": "https://een.ec.europa.eu/events/world-sauna-forum-2026-matchmaking",
-      "description": ""
-    },
-    {
-      "title": "DES2026 Business Meetings",
-      "source": "EEN",
-      "date": "2026-06-11",
-      "date_end": "",
-      "location": "",
-      "url": "https://een.ec.europa.eu/events/des2026-business-meetings",
-      "description": ""
-    },
-    {
-      "title": "Go International Business Meetings @ Nexus Luxembourg 2026",
-      "source": "EEN",
-      "date": "2026-06-11",
-      "date_end": "",
-      "location": "",
-      "url": "https://een.ec.europa.eu/events/go-international-business-meetings-nexus-luxembourg-2026",
-      "description": ""
-    },
-    {
-      "title": "ULUTEK Technology Stage: Defence Industry Collaboration Programme with Roketsan",
-      "source": "EEN",
-      "date": "2026-06-11",
-      "date_end": "",
-      "location": "",
-      "url": "https://een.ec.europa.eu/events/ulutek-technology-stage-defence-industry-collaboration-programme-roketsan",
-      "description": ""
-    },
     {
       "title": "AI ABEL 2026 Artificial Intelligence Applications in Business and Everyday Life",
       "source": "EEN",
@@ -57,7 +21,7 @@
       "description": ""
     },
     {
-      "title": "Matchmaking @ 20th Silicon Saxony Days",
+      "title": "Filter by",
       "source": "EEN",
       "date": "2026-06-17",
       "date_end": "",
@@ -102,11 +66,11 @@
       "description": ""
     },
     {
-      "title": "Filter by",
+      "title": "3rd Collaboration Room in the Field of Artificial Intelligence",
       "source": "EEN",
       "date": "2026-06-18",
       "date_end": "",
-      "location": "Online",
+      "location": "",
       "url": "https://een.ec.europa.eu/events/3rd-collaboration-room-field-artificial-intelligence",
       "description": ""
     },
@@ -120,7 +84,7 @@
       "description": ""
     },
     {
-      "title": "Filter by",
+      "title": "Connect Spain 2026 – Virtual Consultation & Matchmaking Event",
       "source": "EEN",
       "date": "2026-06-23",
       "date_end": "",
@@ -165,11 +129,11 @@
       "description": ""
     },
     {
-      "title": "B2B TORINO FASHION MATCH 2026",
+      "title": "Filter by",
       "source": "EEN",
       "date": "2026-07-02",
       "date_end": "",
-      "location": "",
+      "location": "Online",
       "url": "https://een.ec.europa.eu/events/b2b-torino-fashion-match-2026",
       "description": ""
     },
@@ -219,11 +183,11 @@
       "description": ""
     },
     {
-      "title": "Filter by",
+      "title": "SEMICON India 2026",
       "source": "EEN",
       "date": "2026-09-19",
       "date_end": "",
-      "location": "Online",
+      "location": "",
       "url": "https://een.ec.europa.eu/events/semicon-india-2026",
       "description": ""
     },
@@ -246,6 +210,15 @@
       "description": ""
     },
     {
+      "title": "AAIC - Applied Artificial Intelligence Conference 2026",
+      "source": "EEN",
+      "date": "2026-09-25",
+      "date_end": "",
+      "location": "",
+      "url": "https://een.ec.europa.eu/events/aaic-applied-artificial-intelligence-conference-2026",
+      "description": ""
+    },
+    {
       "title": "Baltic Photonics 2026 MATCHMAKING",
       "source": "EEN",
       "date": "2026-09-25",
@@ -255,7 +228,7 @@
       "description": ""
     },
     {
-      "title": "WindEnergy Match 2026!Onsite & Online",
+      "title": "Filter by",
       "source": "EEN",
       "date": "2026-09-29",
       "date_end": "",
@@ -318,7 +291,7 @@
       "description": ""
     },
     {
-      "title": "Filter by",
+      "title": "Business Meetings Food Paris 2026 (SIAL)",
       "source": "EEN",
       "date": "2026-10-20",
       "date_end": "",
@@ -345,7 +318,7 @@
       "description": ""
     },
     {
-      "title": "CONTACT \"denkmal\" & \"MUTEC\"-  Networking and Matchmaking event",
+      "title": "Filter by",
       "source": "EEN",
       "date": "2026-11-06",
       "date_end": "",
@@ -431,7 +404,7 @@
       "date": "",
       "date_end": "",
       "location": "",
-      "url": "https://een.ec.europa.eu?f%5B0%5D=event_date%3Agt%7C2026-06-10T00%3A00%3A00%2B00%3A00%7C2026-06-10T00%3A00%3A00%2B00%3A00&f%5B1%5D=t%3A627&page=3",
+      "url": "https://een.ec.europa.eu?f%5B0%5D=event_date%3Agt%7C2026-06-11T00%3A00%3A00%2B00%3A00%7C2026-06-11T00%3A00%3A00%2B00%3A00&f%5B1%5D=t%3A627&page=3",
       "description": ""
     },
     {
@@ -588,12 +561,12 @@
       "description": ""
     },
     {
-      "title": "African Business Angel Network (ABAN) 2025 Angel Investment Report",
+      "title": "Meet Tau20: Making Impact Investing Clearer, Fairer, and Actionable",
       "source": "EBAN",
       "date": "",
       "date_end": "",
       "location": "",
-      "url": "https://www.eban.org/industry-reports/african-business-angel-network-aban-2025-angel-investment-report/",
+      "url": "https://www.eban.org/news/meet-tau20-making-impact-investing-clearer-fairer-and-actionable-2/",
       "description": ""
     },
     {
