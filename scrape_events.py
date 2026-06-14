@@ -1,9 +1,7 @@
 """
 scrape_events.py
 ────────────────
-Raccoglie eventi futuri (o aperti) da 8 sorgenti relative all'ecosistema
-di innovazione e finanziamento europeo. Produce events.json.
-
+Collects future or ongoing events from 8 sources and produces events.json 
 Sorgenti:
   1. EEN  – Enterprise Europe Network events
   2. EIC  – European Innovation Council events
@@ -71,13 +69,26 @@ MONTH_MAP = {
 }
 
 def _iso(d: int, m: int, y: int) -> str:
+    """
+    Converts a day, month, and year (three separate numbers) into a standard
+    ISO date string like "2026-04-15". If the combination doesn't form a valid
+    date (e.g. February 30th), it returns an empty string instead of crashing.
+    """
     try:
         return date(y, m, d).isoformat()
     except Exception:
         return ""
 
 def parse_date(text: str) -> str:
-    """Try to extract an ISO date from a free-form string."""
+    """
+    Tries to extract a standardised date (YYYY-MM-DD) from any free-form text
+    string that a web page might contain — for example "15 April 2026",
+    "April 15, 2026", "2026-04-15", or just "April 2026".
+
+    It works through a series of pattern-matching attempts, from the most
+    specific format (full numeric date) down to the least (month and year only).
+    If no recognisable date is found, it returns an empty string.
+    """
     if not text:
         return ""
     t = text.strip()
@@ -112,13 +123,27 @@ def parse_date(text: str) -> str:
     return ""
 
 def is_future_or_ongoing(date_str: str) -> bool:
-    """Return True if date_str is >= TODAY, or if date_str is empty (unknown)."""
+    """
+    Decides whether an event should be included in the output.
+    Returns True (keep the event) if its date is today or in the future,
+    so that past events are automatically filtered out.
+    If the date is unknown (empty string), the event is kept anyway —
+    better to show something uncertain than to silently discard it.
+    """
     if not date_str:
         return True   # keep if date unknown
     return date_str >= TODAY
 
 
 def get_html(url: str, timeout: int = 20) -> BeautifulSoup | None:
+    """
+    Downloads a web page at the given URL and returns its content in a
+    structured, searchable form (a BeautifulSoup object). This works for
+    ordinary websites where the content is directly present in the HTML.
+    If the request fails for any reason (network error, page not found, etc.),
+    it prints an error message and returns None so the caller can handle it
+    gracefully.
+    """
     try:
         r = SESSION.get(url, timeout=timeout)
         r.raise_for_status()
@@ -129,7 +154,15 @@ def get_html(url: str, timeout: int = 20) -> BeautifulSoup | None:
 
 
 def get_html_playwright(url: str) -> str | None:
-    """Fetch JS-rendered page via Playwright and return HTML string."""
+    """
+    Downloads a web page that requires JavaScript to display its content
+    (i.e. pages that don't work with a simple download, because the content
+    is built dynamically in the browser). It does this by launching a real
+    but invisible (headless) Chrome browser via Playwright, navigating to the
+    URL, waiting for all network activity to settle, and then capturing the
+    fully rendered HTML. Returns the HTML as a string, or None if anything
+    goes wrong.
+    """
     try:
         from playwright.sync_api import sync_playwright
         with sync_playwright() as p:
@@ -152,7 +185,16 @@ def get_html_playwright(url: str) -> str | None:
 # Brokerage events, matchmaking, EDF Partner Pool, MSCA events
 
 def scrape_een() -> list:
-    print("EEN…", flush=True)
+    """
+    Collects upcoming events from the Enterprise Europe Network (EEN) website —
+    the EU's main network for business matchmaking and brokerage events.
+
+    It pages through the EEN events listing (up to 6 pages), and for each
+    event card it extracts the title, URL, date, and location. Dates are looked
+    up in priority order: first from a dedicated HTML <time> element, then from
+    any element with a date-related CSS class, and finally from all the text in
+    the card as a last resort. Only future or undated events are kept.
+    """
     events = []
     base = "https://een.ec.europa.eu"
     url = (
@@ -245,7 +287,13 @@ def scrape_een() -> list:
 # ── SOURCE 2: EIC Events ──────────────────────────────────────────────────────
 
 def scrape_eic() -> list:
-    print("EIC…", flush=True)
+    """
+    Collects upcoming events from the European Innovation Council (EIC) website.
+    The EIC is the EU body that funds high-risk, high-potential innovators and
+    startups. This function loads the EIC events page, finds all event cards,
+    and extracts the title, URL, date, location, and a short description for
+    each one. Only future or undated events are kept.
+    """
     events = []
     base = "https://eic.ec.europa.eu"
     url  = f"{base}/events_en"
@@ -288,7 +336,14 @@ def scrape_eic() -> list:
 # ── SOURCE 3: Access2EIC ──────────────────────────────────────────────────────
 
 def scrape_access2eic() -> list:
-    print("Access2EIC…", flush=True)
+    """
+    Collects events from Access2EIC, a network of National Contact Points (NCPs)
+    that helps organisations apply for EIC funding. The site runs on WordPress,
+    so events appear as standard article/post elements. This function extracts
+    the title, URL, date, and a short description from each event post, and
+    keeps only future or undated items. All events are marked as "Online" since
+    this network primarily operates digitally.
+    """
     events = []
     url  = "https://access2eic.eu/eventi/"
     soup = get_html(url)
@@ -324,7 +379,14 @@ def scrape_access2eic() -> list:
 # ── SOURCE 4: EBAN ────────────────────────────────────────────────────────────
 
 def scrape_eban() -> list:
-    print("EBAN…", flush=True)
+    """
+    Collects events from the European Business Angels Network (EBAN), the
+    association representing the early-stage investor community in Europe.
+    It loads the EBAN events page and scans all article and card elements for
+    event titles, URLs, dates, and locations. Very short strings (under 5
+    characters) are skipped to avoid picking up navigation labels or stray
+    fragments. Only future or undated events are kept.
+    """
     events = []
     url  = "https://www.eban.org/events-page/"
     soup = get_html(url)
@@ -362,7 +424,15 @@ def scrape_eban() -> list:
 # ── SOURCE 5: BpiFrance (Playwright) ─────────────────────────────────────────
 
 def scrape_bpifrance() -> list:
-    print("BpiFrance…", flush=True)
+    """
+    Collects matchmaking and investment events from BpiFrance, the French public
+    investment bank that co-organises many European innovation events. Because the
+    BpiFrance events page is built with JavaScript (the content only appears after
+    the browser runs scripts), a regular download would return an empty page.
+    Instead, this function uses Playwright to open the page in a real browser,
+    wait for it to fully load, and then parse the rendered content. Only future
+    or undated events are kept.
+    """
     events = []
     url = "https://evenements.bpifrance.fr/events"
 
@@ -401,7 +471,14 @@ def scrape_bpifrance() -> list:
 # ── SOURCE 6: European Startup Network ───────────────────────────────────────
 
 def scrape_esn() -> list:
-    print("European Startup Network…", flush=True)
+    """
+    Collects news and events from the European Startup Network (ESN), the
+    umbrella organisation connecting national startup associations across Europe.
+    Unlike the other scrapers, this one pulls from a general news feed rather
+    than a dedicated events calendar, so all recent items are included regardless
+    of date (there is no future-only filter here). Each item's title, URL, date,
+    and a short description excerpt (up to 200 characters) are extracted.
+    """
     events = []
     url  = "https://europeanstartupnetwork.eu/news/"
     soup = get_html(url)
@@ -440,7 +517,14 @@ def scrape_esn() -> list:
 # ── SOURCE 7: EuroQuity / Access2EIC community (Playwright) ──────────────────
 
 def scrape_euroquity() -> list:
-    print("EuroQuity…", flush=True)
+    """
+    Collects events from the EuroQuity Access2EIC community page. EuroQuity is
+    an investor-matching platform; its Access2EIC section lists events relevant
+    to EIC-funded companies seeking investment. Like BpiFrance, this page is
+    JavaScript-rendered, so Playwright is used to launch a browser, fully load
+    the page, and capture the HTML before parsing it. Relative links are
+    converted to full URLs. Only future or undated events are kept.
+    """
     events = []
     url = "https://www.euroquity.com/en/community/access2eic"
 
@@ -479,7 +563,15 @@ def scrape_euroquity() -> list:
 # ── SOURCE 8: EC Seal of Excellence ──────────────────────────────────────────
 
 def scrape_seal_of_excellence() -> list:
-    print("EC Seal of Excellence…", flush=True)
+    """
+    Collects funding opportunities from the European Commission's EIC Seal of
+    Excellence page. The Seal of Excellence is awarded to high-quality proposals
+    that couldn't be funded by the EIC due to budget limits, and this page lists
+    alternative funding opportunities for those projects. Unlike the other
+    sources, these are not events in the calendar sense but open funding calls —
+    each listing is treated as an item with a title, URL, and optional deadline
+    date. Only current or undated opportunities are kept.
+    """
     events = []
     url = "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/seal-excellence/eic-seal-excellence-opportunities_en"
     soup = get_html(url)
@@ -517,7 +609,22 @@ def scrape_seal_of_excellence() -> list:
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    all_events = []
+    """
+    Orchestrates the full scraping run and produces the final output file.
+
+    Steps:
+    1. Calls all eight source-specific scraping functions in sequence, collecting
+       their results into a single flat list of events.
+    2. Deduplicates the list by URL — if the same event appears on more than one
+       source, only the first occurrence is kept.
+    3. Sorts the deduplicated list so that events with known dates come first
+       (in chronological order), followed by any events whose date could not be
+       determined.
+    4. Wraps everything in a JSON object that also records the timestamp of when
+       the scrape was run and the total event count, then writes it to events.json.
+    5. Prints a summary table showing how many events were collected from each
+       source.
+    """
 
     # Static HTML sources (fast)
     all_events += scrape_een()
