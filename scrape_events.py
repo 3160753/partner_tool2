@@ -2,7 +2,7 @@
 scrape_events.py
 ────────────────
 Collects future or ongoing events from 8 sources and produces events.json 
-Sorgenti:
+Sources:
   1. EEN  – Enterprise Europe Network events
   2. EIC  – European Innovation Council events
   3. Access2EIC – NCP events network
